@@ -1,6 +1,6 @@
 
 
- <h2 align="center"> You are watching Samir Parhi's Profile </h2>
+ <h2 align="center"> 👋 Hi..  I am Samir Parhi,  From India <img src="https://image.flaticon.com/icons/svg/3014/3014003.svg" width="18"/> </h2> 
  
  **About Me:**
 
