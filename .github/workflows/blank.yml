@@ -1,0 +1,38 @@
+name: Fetch Organizations
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Fetch Organizations
+      id: fetch_orgs
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # store your access token as a secret
+      run: |
+        ORGS=$(curl -s -H "Authorization: token $ACCESS_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/user/orgs | jq -r '.[].login')
+        echo "::set-output name=orgs::$ORGS"
+      
+    - name: Generate README
+      id: generate_readme
+      run: |
+        echo "## My Organizations" > README.md
+        echo >> README.md
+        echo "These are the organizations I belong to:" >> README.md
+        echo >> README.md
+        echo "\`\`\`" >> README.md
+        echo "${{ steps.fetch_orgs.outputs.orgs }}" >> README.md
+        echo "\`\`\`" >> README.md
+        
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update README with organizations
