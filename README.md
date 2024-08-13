@@ -66,6 +66,14 @@ Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to D
 <a><img src="https://img.shields.io/badge/Tool%20Integrations-8A2BE2?logo=wear-os&logoColor=white" alt="Integrations"></a>
 </p>
 
+### 🛠️ Recent Learnings :
+<p align="left"> 
+<a><img src="https://img.shields.io/badge/julia-FFD700?logo=julia&logoColor=blue" alt="Julia"></a>
+<a><img src="https://img.shields.io/badge/Dash-FF0B7A?logo=dashx&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Data-FA8072?logo=data&logoColor=white" alt="Data Pipeline"></a>
+<a><img src="https://img.shields.io/badge/Leptos-000000?logo=Rust%20leptoss&logoColor=white" alt="Rust Leptos"></a>
+</p>
+
 ### 🖊️ Contribution Snapshot :
 <p align="center">
  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=samirparhi-dev&theme=graywhite&date_format=j%20M%5B%20Y%5D&card_width=600&ring=EB5454&background=45%2CEBDBCD%2CEBE6E2" alt="GitHub Streak" /></a>
