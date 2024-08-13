@@ -22,10 +22,14 @@ A passionate technologist, firmly believe in the transformative potential of ope
 Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to DevSecOps, In course of time I realised the importance of Privacy and security. Now in a journey of enjoying and learning the Art of Cyber security. Curious to learn more break more techs and realise the potential. Lets work together for a transparent Livelihood enriched with Privacy and security . Always open-to-work for free if there is a social cause that imprints my skill-set.
 </p>
 
-### ⌘ Special Interest :
+### ⌘ Special Interest & Expertise :
 <p align="left"> 
 <a><img src="https://img.shields.io/badge/Cyber%20Security-F7E7FA?logo=snyk&logoColor=black" alt="Cyber Security"></a>
 <a><img src="https://img.shields.io/badge/Rust-E6E6FA?logo=rust&logoColor=black" alt="Rust"></a>
+<a><img src="https://img.shields.io/badge/Julia-F5FFFA?logo=Julia" alt="Julia"></a>
+<a><img src="https://img.shields.io/badge/Julia%20Dash-FF0B7A?logo=Dash&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Data%20Pipeline-FF0B7A?logo=Argocd&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Leptos-F5FFFA?logo=Leptos" alt="Rust Leptos"></a>
 <a><img src="https://img.shields.io/badge/AI-F5FFFA?logo=openai&logoColor=red" alt="DevOps"></a>
 <a><img src="https://img.shields.io/badge/-F8EFFA?logo=apple&logoColor=grey" alt="Mac"></a>
 </p>
@@ -66,13 +70,6 @@ Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to D
 <a><img src="https://img.shields.io/badge/Tool%20Integrations-8A2BE2?logo=wear-os&logoColor=white" alt="Integrations"></a>
 </p>
 
-### 🛠️ Recent Learnings :
-<p align="left"> 
-<a><img src="https://img.shields.io/badge/Julia-F5FFFA?logo=Julia" alt="Julia"></a>
-<a><img src="https://img.shields.io/badge/Julia%20Dash-FF0B7A?logo=Dash&logoColor=white" alt="Julia Dash"></a>
-<a><img src="https://img.shields.io/badge/Data%20Pipeline-FF0B7A?logo=Argocd&logoColor=white" alt="Julia Dash"></a>
-<a><img src="https://img.shields.io/badge/Leptos-F5FFFA?logo=Leptos" alt="Rust Leptos"></a>
-</p>
 
 ### 🖊️ Contribution Snapshot :
 <p align="center">
