@@ -68,10 +68,10 @@ Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to D
 
 ### 🛠️ Recent Learnings :
 <p align="left"> 
-<a><img src="https://img.shields.io/badge/julia-FFD700?logo=julia&logoColor=blue" alt="Julia"></a>
-<a><img src="https://img.shields.io/badge/Dash-FF0B7A?logo=dashx&logoColor=white" alt="Julia Dash"></a>
-<a><img src="https://img.shields.io/badge/Data-FA8072?logo=data&logoColor=white" alt="Data Pipeline"></a>
-<a><img src="https://img.shields.io/badge/Leptos-000000?logo=Rust%20leptoss&logoColor=white" alt="Rust Leptos"></a>
+<a><img src="https://img.shields.io/badge/Julia-F5FFFA?logo=Julia" alt="Julia"></a>
+<a><img src="https://img.shields.io/badge/Julia%20Dash-FF0B7A?logo=Dash&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Data%20Pipeline-FF0B7A?logo=Argocd&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Leptos-F5FFFA?logo=Leptos" alt="Rust Leptos"></a>
 </p>
 
 ### 🖊️ Contribution Snapshot :
