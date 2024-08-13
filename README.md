@@ -24,11 +24,11 @@ Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to D
 
 ### ⌘ Special Interest & Expertise :
 <p align="left"> 
-<a><img src="https://img.shields.io/badge/Cyber%20Security-F7E7FA?logo=snyk&logoColor=black" alt="Cyber Security"></a>
-<a><img src="https://img.shields.io/badge/Rust-E6E6FA?logo=rust&logoColor=black" alt="Rust"></a>
+<a><img src="https://img.shields.io/badge/Cyber%20Security-F8EFFA?logo=snyk&logoColor=black" alt="Cyber Security"></a>
+<a><img src="https://img.shields.io/badge/Rust-F8EFFA?logo=rust&logoColor=black" alt="Rust"></a>
 <a><img src="https://img.shields.io/badge/Julia-F5FFFA?logo=Julia" alt="Julia"></a>
 <a><img src="https://img.shields.io/badge/Julia%20Dash-FF0B7A?logo=Dash&logoColor=white" alt="Julia Dash"></a>
-<a><img src="https://img.shields.io/badge/Data%20Pipeline-FF0B7A?logo=Argocd&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Data%20Pipeline-FF0B7A?logo=Argo&logoColor=white" alt="Data Pipeline"></a>
 <a><img src="https://img.shields.io/badge/Leptos-F5FFFA?logo=Leptos" alt="Rust Leptos"></a>
 <a><img src="https://img.shields.io/badge/AI-F5FFFA?logo=openai&logoColor=red" alt="DevOps"></a>
 <a><img src="https://img.shields.io/badge/-F8EFFA?logo=apple&logoColor=grey" alt="Mac"></a>
@@ -40,6 +40,10 @@ Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to D
 <a><img src="https://img.shields.io/badge/Linux-FF0B7A?logo=linux&logoColor=white" alt="Linux"></a>
 <a><img src="https://img.shields.io/badge/GitHub-FA8072?logo=github&logoColor=white" alt="GitHub"></a>
 <a><img src="https://img.shields.io/badge/Rust-800000?logo=rust&logoColor=white" alt="Rust"></a>
+<a><img src="https://img.shields.io/badge/Julia-F5FFFA?logo=Julia" alt="Julia"></a>
+<a><img src="https://img.shields.io/badge/Julia%20Dash-FF0B7A?logo=Dash&logoColor=white" alt="Julia Dash"></a>
+<a><img src="https://img.shields.io/badge/Data%20Pipeline-FF0B7A?logo=Argo&logoColor=white" alt="Data Pipeline"></a>
+<a><img src="https://img.shields.io/badge/Leptos-F5FFFA?logo=Leptos" alt="Rust Leptos"></a>
 <a><img src="https://img.shields.io/badge/JWT-000000?logo=JSON%20web%20tokens&logoColor=white" alt="JWT Token"></a>
 <a><img src="https://img.shields.io/badge/Shell-7FFF00?logo=gnu-bash&logoColor=black" alt="Shell Script"></a>
 <a><img src="https://img.shields.io/badge/Python-FF6347?logo=python&logoColor=white" alt="Python"></a>
