@@ -18,8 +18,7 @@
 
 ### 👨🏻‍💻 About :
 <p align="left"> 
-A passionate technologist, firmly believe in the transformative potential of open-source software. 
-Enjoyed breaking and quick fixing system as a DevOps engineer , then headed to DevSecOps, In course of time I realised the importance of Privacy and security. Now in a journey of enjoying and learning the Art of Cyber security. Curious to learn more break more techs and realise the potential. Lets work together for a transparent Livelihood enriched with Privacy and security . Always open-to-work for free if there is a social cause that imprints my skill-set.
+A passionate technologist, firmly believe in the transformative potential of open-source software. I ⚒️ Desig and > Code 📱 Apps with High standard security Specification and Robust. All ⚙ RUST and Julia. My Designs/Approachs are Data Driven and Machine Efficient.
 </p>
 
 ### ⌘ Special Interest & Expertise :
