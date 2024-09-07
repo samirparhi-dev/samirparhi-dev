@@ -15,6 +15,12 @@
    <a href="https://twitter.com/samirparhi"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fsamirparhi"></a>
    <a href="mailto:samirparhi@gmail.com"><img src="https://img.shields.io/badge/-Mail-4169E1?logo=gmail&logoColor=white" ></a>
  </p>
+ ### Websites built 🕸️ :
+ <p align="center">
+   <a href="https://ls-lrt.com/"> My blog (Built with Rust and Zola)</a>
+   <a href="https://sharang.s9lab.dev/"> A Saas Productivity App (Built Julia and Dash.jl)</a>
+   <a href="https://capita7.com/"> App for a Community (Built with Rust and leptos)</a>
+ </p>
 
 ### 👨🏻‍💻 About :
 <p align="left"> 
