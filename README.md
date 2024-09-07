@@ -19,9 +19,9 @@
  ### > Websites built :
 
  <p align="center">
-   <a href="https://ls-lrt.com/"> <img src="https://img.shields.io/badge/%20My%20blog%20(Built%20with%20Rust%20and%20Zola)%20-FF0B7A?"></a>
-   <a href="https://sharang.s9lab.dev/"> <img src="https://img.shields.io/badge/%20A%20Saas%20Productivity%20App%20(Built%20with%20Julia%20and%20Dash.jl)%20-FF0B7A?"></a>
-   <a href="https://capita7.com/"><img src="https://img.shields.io/badge/%20A%20Org%20App%20(Built%20with%20Rust%20and%20leptos)%20-FF0B7A?"></a>
+   <a href="https://ls-lrt.com/"> <img src="https://img.shields.io/badge/%20My%20blog%20(Built%20with%20Rust%20and%20Zola)%20-F8EFFA?"></a>
+   <a href="https://sharang.s9lab.dev/"> <img src="https://img.shields.io/badge/%20A%20Saas%20Productivity%20App%20(Built%20with%20Julia%20and%20Dash.jl)%20-F8EFFA?"></a>
+   <a href="https://capita7.com/"><img src="https://img.shields.io/badge/%20A%20Org%20App%20(Built%20with%20Rust%20and%20leptos)%20-F8EFFA?"></a>
  </p>
 
 ### 👨🏻‍💻 About :
