@@ -19,9 +19,9 @@
  ### Websites built 🕸️ :
 
  <p align="center">
-   <br><a href="https://ls-lrt.com/"> My blog (Built with Rust and Zola)</a>
-   <br><a href="https://sharang.s9lab.dev/"> A Saas Productivity App (Built Julia and Dash.jl)</a>
-   <br><a href="https://capita7.com/"> App for a Community (Built with Rust and leptos)</a>
+   <br><a href="https://ls-lrt.com/"> <img src="https://img.shields.io/badge/%20My%20blog">(Built with Rust and Zola)</a>
+   <br><a href="https://sharang.s9lab.dev/"> <img src="https://img.shields.io/badge/%20A%20Saas%20Productivity%20App">(Built Julia and Dash.jl)</a>
+   <br><a href="https://capita7.com/"><img src="https://img.shields.io/badge/%20A%20Org%20App%20-BA55D3?">(Built with Rust and leptos)</a>
  </p>
 
 ### 👨🏻‍💻 About :
