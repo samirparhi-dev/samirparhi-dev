@@ -1,3 +1,4 @@
+![Metrics](https://metrics.lecoq.io/samirparhi-dev?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&config.timezone=Asia%2FCalcutta)
 <p align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Major+Mono+Display&size=35&pause=2000&color=-4B0082&center=true&repeat=false&random=false&width=330&height=75&lines=Hello+🌏" alt="Typing SVG" /></a>
 </p>
