@@ -1,7 +1,7 @@
 <a href="https://github.com/samirparhi-dev">
-  <img align="center" width="49%" src="./github-metrics.svg"/>
+  <img align="center" width="49%" src="./metrics.base.svg"/>
 </a>
-<!-- <a href="https://github.com/samirparhi-dev">
+<a href="https://github.com/samirparhi-dev">
   <img align="center" width="49%" src="./metrics.plugin.isocalendar.fullyear.svg"/>
 </a>
 <a href="https://github.com/samirparhi-dev">
@@ -15,4 +15,4 @@
 </a>
 <a href="https://github.com/samirparhi-dev">
   <img align="center" width="49%" src="./metrics.plugin.activity.svg"/>
-</a> -->
+</a>
