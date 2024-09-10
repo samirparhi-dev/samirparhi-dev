@@ -1,10 +1,10 @@
 name: GitHub Stat Generator
 on:
-  schedule:
-    - cron: "0 * * * *"
-  push:
-    branches:
-      - main
+  # schedule:
+  #   - cron: "0 * * * *"
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
