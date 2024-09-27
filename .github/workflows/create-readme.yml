@@ -26,20 +26,9 @@ jobs:
           plugin_languages_indepth: yes
           plugin_languages_ignored: handlebars, php, html, css
           plugin_languages_details: percentage
-          plugin_habits: yes
-          plugin_habits_facts: no
-          plugin_habits_charts: yes
           plugin_notable: yes
           plugin_notable_from: all
           plugin_notable_indepth: yes
           plugin_notable_types: commit, pull_request, issue
-          plugin_activity: yes
-          plugin_activity_limit: 20
-          plugin_activity_timestamps: yes
-          plugin_discussions: yes
-          plugin_discussions_categories: yes
-          plugin_16personalities: yes
-          plugin_16personalities_scores: yes
-          plugin_16personalities_sections: personality
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
