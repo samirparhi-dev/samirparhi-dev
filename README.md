@@ -3,8 +3,6 @@
  <p align="center">
    <img align="left" width="10%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/s9lab-logo-new.png">
   <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/sharang-new.svg">
-   <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/samirparhi-logo.png">
-  <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/capita-7-logo-latest.png">
  </p>
 </div>
 
