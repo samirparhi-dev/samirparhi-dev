@@ -1,10 +1,10 @@
  ### 🌿 Creator of:
 <div style="text-align: left;">
  <p align="center">
-   
-   <a href="https://sharang.s9lab.dev/>(https://github.com/samirparhi-dev/sharang)"> <img src="https://img.shields.io/badge/%20Shrang%20App%20(Julia%20and%20Dash.jl)%20-8A2BE2?"></a>
-   <a href="https://capita7.com/"><img src="https://img.shields.io/badge/%20Capita7%20(Rust%20and%20leptos)%20-8A2BE2?"></a>
-   <a href="https://ls-lrt.com/"> <img src="https://img.shields.io/badge/A%20blog%20site(Rust%20and%20Zola)%20-8A2BE2?"></a>
+   <img align="left" width="10%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/s9lab-logo-new.png">
+  <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/sharang-new.svg">
+   <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/samirparhi-logo.png">
+  <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/capita-7-logo-latest.png">
  </p>
 </div>
  
