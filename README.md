@@ -7,6 +7,13 @@
   <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/capita-7-logo-latest.png">
  </p>
 </div>
+
+<div style="text-align: right;">
+ <p align="right">
+   <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/samirparhi-logo.png">
+  <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/capita-7-logo-latest.png">
+ </p>
+</div>
  
 <a href="https://github.com/samirparhi-dev">
   <img align="left" width="90%" src="./general.svg"/>
