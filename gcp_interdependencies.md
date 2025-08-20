@@ -6,19 +6,19 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                             CLOUD NAT (REALITY)                                │
+│                             CLOUD NAT (REALITY)                                 │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│  ✅ WHAT IT IS:                          ❌ WHAT IT IS NOT:                    │
-│  • IP Address Translator                 • NOT a Firewall                      │
-│  • Port Mapper                          • NOT a Security Device                │
-│  • Stateful Connection Tracker          • NOT Traffic Filter                   │
-│  • Outbound-only Gateway                • NOT Access Control                   │
-│  • Network Address Translation Service   • NOT Intrusion Prevention            │
-│                                         • NOT Deep Packet Inspection          │
+│  ✅ WHAT IT IS:                          ❌ WHAT IT IS NOT:                      │
+│  • IP Address Translator                 • NOT a Firewall                       │
+│  • Port Mapper                          • NOT a Security Device                 │
+│  • Stateful Connection Tracker          • NOT Traffic Filter                    │
+│  • Outbound-only Gateway                • NOT Access Control                    │
+│  • Network Address Translation Service   • NOT Intrusion Prevention             │
+│                                         • NOT Deep Packet Inspection            │
 │                                                                                 │
-│  FUNCTION: Changes private IPs to public IPs for internet access               │
-│  SECURITY: Provides basic isolation by being outbound-only                     │
+│  FUNCTION: Changes private IPs to public IPs for internet access                │
+│  SECURITY: Provides basic isolation by being outbound-only                      │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -29,55 +29,55 @@
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                        GCP PROJECT                                                      │
 │                                                                                                         │
-│  ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   │
-│  │                                    VPC NETWORK                                                  │   │
-│  │                                                                                                 │   │
-│  │  ┌─────────────────────────────────────────────────────────────────────────────────────────┐   │   │
-│  │  │                              FIREWALL RULES                                             │   │   │
-│  │  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                   │   │   │
-│  │  │  │   INGRESS   │  │   EGRESS    │  │   DENY      │  │   ALLOW     │                   │   │   │
-│  │  │  │   RULES     │  │   RULES     │  │   RULES     │  │   RULES     │                   │   │   │
-│  │  │  │             │  │             │  │             │  │             │                   │   │   │
-│  │  │  │• HTTP :80   │  │• ALL EGRESS │  │• SSH :22    │  │• HTTPS:443  │                   │   │   │
-│  │  │  │• HTTPS:443  │  │• DNS :53    │  │• RDP :3389  │  │• Custom     │                   │   │   │
-│  │  │  │• Custom     │  │• NTP :123   │  │• Custom     │  │• Tags       │                   │   │   │
-│  │  │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘                   │   │   │
-│  │  └─────────────────────────────────────────────────────────────────────────────────────────┘   │   │
-│  │                                                │                                               │   │
-│  │                                                │ FIREWALL APPLIED TO ALL TRAFFIC               │   │
-│  │                                                ▼                                               │   │
-│  │  ┌─────────────────────────────────────────────────────────────────────────────────────────┐   │   │
-│  │  │                                 SUBNETS                                                 │   │   │
-│  │  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                                     │   │   │
-│  │  │  │ SUBNET A    │  │ SUBNET B    │  │ SUBNET C    │                                     │   │   │
-│  │  │  │ 10.1.0.0/24 │  │ 10.2.0.0/24 │  │ 10.3.0.0/24 │                                     │   │   │
-│  │  │  │             │  │             │  │             │                                     │   │   │
-│  │  │  │┌───────────┐│  │┌───────────┐│  │┌───────────┐│                                     │   │   │
-│  │  │  ││Private VMs││  ││Private VMs││  ││Private VMs││                                     │   │   │
-│  │  │  ││No Pub IPs ││  ││No Pub IPs ││  ││No Pub IPs ││                                     │   │   │
-│  │  │  │└───────────┘│  │└───────────┘│  │└───────────┘│                                     │   │   │
-│  │  │  └─────────────┘  └─────────────┘  └─────────────┘                                     │   │   │
-│  │  └─────────────────────────────────────────────────────────────────────────────────────────┘   │   │
-│  │                                                │                                               │   │
-│  │                                                │ ALL VM TRAFFIC                                │   │
-│  │                                                ▼                                               │   │
-│  │  ┌─────────────────────────────────────────────────────────────────────────────────────────┐   │   │
-│  │  │                            CLOUD ROUTER (MANDATORY HUB)                                │   │   │
-│  │  │                                                                                         │   │   │
-│  │  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                   │   │   │
-│  │  │  │   ROUTING   │  │    BGP      │  │  ROUTE      │  │   PATH      │                   │   │   │
-│  │  │  │    LOGIC    │  │  SESSIONS   │  │ PRIORITY    │  │  SELECTION  │                   │   │   │
-│  │  │  │             │  │             │  │             │  │             │                   │   │   │
-│  │  │  │• VPC Routes │  │• On-prem    │  │• Static:100 │  │• Dest: ?    │                   │   │   │
-│  │  │  │• NAT Routes │  │• BGP Learn  │  │• BGP: 200   │  │• NAT or VPN │                   │   │   │
-│  │  │  │• VPN Routes │  │• Advertise  │  │• Default    │  │• Internet   │                   │   │   │
-│  │  │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘                   │   │   │
-│  │  └─────────────────────────────────────────────────────────────────────────────────────────┘   │   │
+│  ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐    │
+│  │                                    VPC NETWORK                                                  │    │
+│  │                                                                                                 │    │
+│  │  ┌─────────────────────────────────────────────────────────────────────────────────────────┐    │     │
+│  │  │                              FIREWALL RULES                                             │    │     │
+│  │  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                     │    │      │
+│  │  │  │   INGRESS   │  │   EGRESS    │  │   DENY      │  │   ALLOW     │                     │    │       │
+│  │  │  │   RULES     │  │   RULES     │  │   RULES     │  │   RULES     │                     │    │       │
+│  │  │  │             │  │             │  │             │  │             │                     │    │       │
+│  │  │  │• HTTP :80   │  │• ALL EGRESS │  │• SSH :22    │  │• HTTPS:443  │                     │    │       │
+│  │  │  │• HTTPS:443  │  │• DNS :53    │  │• RDP :3389  │  │• Custom     │                     │    │       │
+│  │  │  │• Custom     │  │• NTP :123   │  │• Custom     │  │• Tags       │                     │    │       │
+│  │  │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘                     │    │       │
+│  │  └─────────────────────────────────────────────────────────────────────────────────────────┘    │   │
+│  │                                                │                                                │   │
+│  │                                                │ FIREWALL APPLIED TO ALL TRAFFIC                │   │
+│  │                                                ▼                                                │   │
+│  │  ┌─────────────────────────────────────────────────────────────────────────────────────────┐    │   │
+│  │  │                                 SUBNETS                                                 │    │   │
+│  │  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                                     │     │   │
+│  │  │  │ SUBNET A    │  │ SUBNET B    │  │ SUBNET C    │                                     │     │   │
+│  │  │  │ 10.1.0.0/24 │  │ 10.2.0.0/24 │  │ 10.3.0.0/24 │                                     │     │   │
+│  │  │  │             │  │             │  │             │                                     │     │   │
+│  │  │  │┌───────────┐│  │┌───────────┐│  │┌───────────┐│                                     │     │   │
+│  │  │  ││Private VMs││  ││Private VMs││  ││Private VMs││                                     │     │   │
+│  │  │  ││No Pub IPs ││  ││No Pub IPs ││  ││No Pub IPs ││                                     │     │   │
+│  │  │  │└───────────┘│  │└───────────┘│  │└───────────┘│                                     │     │   │
+│  │  │  └─────────────┘  └─────────────┘  └─────────────┘                                     │     │   │
+│  │  └─────────────────────────────────────────────────────────────────────────────────────────┘    │   │
+│  │                                                │                                                │   │
+│  │                                                │ ALL VM TRAFFIC                                 │   │
+│  │                                                ▼                                                │   │
+│  │  ┌─────────────────────────────────────────────────────────────────────────────────────────┐    │   │
+│  │  │                            CLOUD ROUTER (MANDATORY HUB)                                 │    │   │
+│  │  │                                                                                         │    │   │
+│  │  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                     │    │   │
+│  │  │  │   ROUTING   │  │    BGP      │  │  ROUTE      │  │   PATH      │                     │    │   │
+│  │  │  │    LOGIC    │  │  SESSIONS   │  │ PRIORITY    │  │  SELECTION  │                     │    │   │
+│  │  │  │             │  │             │  │             │  │             │                     │    │   │
+│  │  │  │• VPC Routes │  │• On-prem    │  │• Static:100 │  │• Dest: ?    │                     │    │   │
+│  │  │  │• NAT Routes │  │• BGP Learn  │  │• BGP: 200   │  │• NAT or VPN │                     │    │   │
+│  │  │  │• VPN Routes │  │• Advertise  │  │• Default    │  │• Internet   │                     │    │   │
+│  │  │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘                     │    │   │
+│  │  └─────────────────────────────────────────────────────────────────────────────────────────┘    │   │
 │  └─────────────────────────────────────────────────────────────────────────────────────────────────┘   │
 │                                            │                                                           │
 │                                            │ ROUTING DECISIONS                                         │
 │                                            ▼                                                           │
-└────────────────────────────┬───────────────┼───────────────┬─────────────────────────────────────────┘
+└────────────────────────────┬───────────────┼───────────────┬────────────────────────────────────────--─┘
                              │               │               │
                              ▼               ▼               ▼
                     ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
@@ -113,26 +113,26 @@
 │                         MANDATORY DEPENDENCIES                                  │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│  Cloud NAT ───────REQUIRES──────► Cloud Router                                 │
-│       │                              │                                         │
-│       │                              │                                         │
-│       ▼                              ▼                                         │
-│  Cannot exist without         Must be attached to                              │
-│  Cloud Router                 Cloud Router                                     │
+│  Cloud NAT ───────REQUIRES──────► Cloud Router                                  │
+│       │                              │                                          │
+│       │                              │                                          │
+│       ▼                              ▼                                          │
+│  Cannot exist without         Must be attached to                               │
+│  Cloud Router                 Cloud Router                                      │
 │                                                                                 │
-│  Cloud VPN ───────REQUIRES──────► Cloud Router                                 │
-│       │                              │                                         │
-│       │                              │                                         │
-│       ▼                              ▼                                         │
-│  BGP sessions need             Provides BGP                                    │
-│  routing decisions             management                                      │
+│  Cloud VPN ───────REQUIRES──────► Cloud Router                                  │
+│       │                              │                                          │
+│       │                              │                                          │
+│       ▼                              ▼                                          │
+│  BGP sessions need             Provides BGP                                     │
+│  routing decisions             management                                       │
 │                                                                                 │
-│  ALL TRAFFIC ─────PASSES THROUGH────► Cloud Router                            │
-│       │                                │                                       │
-│       │                                │                                       │
-│       ▼                                ▼                                       │
-│  Every packet gets             Central routing                                 │
-│  routing decision              decision point                                  │
+│  ALL TRAFFIC ─────PASSES THROUGH────► Cloud Router                              │
+│       │                                │                                        │
+│       │                                │                                        │
+│       ▼                                ▼                                        │
+│  Every packet gets             Central routing                                  │
+│  routing decision              decision point                                   │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -179,37 +179,37 @@
 │                            COMPONENT RESPONSIBILITIES                           │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│  ┌─────────────────┐                                                           │
-│  │ FIREWALL RULES  │ ──► Security & Access Control                             │
-│  └─────────────────┘     │                                                     │
-│           │               ├─ Allow/Deny traffic by IP, port, protocol          │
+│  ┌─────────────────┐                                                            │
+│  │ FIREWALL RULES  │ ──► Security & Access Control                              │
+│  └─────────────────┘     │                                                      │
+│           │               ├─ Allow/Deny traffic by IP, port, protocol           │
 │           │               ├─ Applied BEFORE routing decisions                   │
-│           │               ├─ Works at packet filter level                      │
-│           │               └─ Stateful connection tracking                      │
+│           │               ├─ Works at packet filter level                       │
+│           │               └─ Stateful connection tracking                       │
 │           ▼                                                                     │
-│  ┌─────────────────┐                                                           │
-│  │ CLOUD ROUTER    │ ──► Routing & Path Selection                              │
-│  └─────────────────┘     │                                                     │
-│           │               ├─ Decides WHERE to send packets                     │
-│           │               ├─ BGP protocol management                           │
-│           │               ├─ Route priority and selection                      │
-│           │               └─ Central hub for all connections                   │
+│  ┌─────────────────┐                                                            │
+│  │ CLOUD ROUTER    │ ──► Routing & Path Selection                               │
+│  └─────────────────┘     │                                                      │
+│           │               ├─ Decides WHERE to send packets                      │
+│           │               ├─ BGP protocol management                            │
+│           │               ├─ Route priority and selection                       │
+│           │               └─ Central hub for all connections                    │
 │           ▼                                                                     │
-│  ┌─────────────────┐                                                           │
-│  │   CLOUD NAT     │ ──► IP Translation & Internet Access                      │
-│  └─────────────────┘     │                                                     │
-│           │               ├─ Translates private IPs to public IPs              │
-│           │               ├─ Enables outbound internet access                  │
-│           │               ├─ Port mapping and state tracking                   │
-│           │               └─ NO security filtering (just translation)          │
+│  ┌─────────────────┐                                                            │
+│  │   CLOUD NAT     │ ──► IP Translation & Internet Access                       │
+│  └─────────────────┘     │                                                      │
+│           │               ├─ Translates private IPs to public IPs               │
+│           │               ├─ Enables outbound internet access                   │
+│           │               ├─ Port mapping and state tracking                    │
+│           │               └─ NO security filtering (just translation)           │
 │           ▼                                                                     │
-│  ┌─────────────────┐                                                           │
-│  │   CLOUD VPN     │ ──► Secure On-Premises Connectivity                       │
-│  └─────────────────┘     │                                                     │
-│                           ├─ IPSec encryption for secure tunnels               │
-│                           ├─ Site-to-site network extension                    │
-│                           ├─ BGP for dynamic routing                           │
-│                           └─ Bidirectional encrypted communication             │
+│  ┌─────────────────┐                                                            │
+│  │   CLOUD VPN     │ ──► Secure On-Premises Connectivity                        │
+│  └─────────────────┘     │                                                      │
+│                           ├─ IPSec encryption for secure tunnels                │
+│                           ├─ Site-to-site network extension                     │
+│                           ├─ BGP for dynamic routing                            │
+│                           └─ Bidirectional encrypted communication              │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -288,7 +288,7 @@ Interdependencies in this flow:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                        CLOUD NAT vs FIREWALL                                   │
+│                        CLOUD NAT vs FIREWALL                                    │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
 │  CLOUD NAT                           │  FIREWALL RULES                          │
