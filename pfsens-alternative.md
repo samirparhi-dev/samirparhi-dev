@@ -32,26 +32,26 @@
 ┌─────────────────────────────────────────────────────┐
 │                PROBLEMATIC AREAS                    │
 ├─────────────────────────────────────────────────────┤
-│ 1. Complex Multi-WAN Routing                       │
-│    • Load balancing inconsistencies                │
-│    • Gateway monitoring false positives            │
+│ 1. Complex Multi-WAN Routing                        │
+│    • Load balancing inconsistencies                 │
+│    • Gateway monitoring false positives             │
 │                                                     │
-│ 2. VPN in Complex Topologies                       │
-│    • Site-to-site with multiple subnets           │
-│    • VPN + VLAN interactions                       │
-│    • NAT traversal issues                          │
+│ 2. VPN in Complex Topologies                        │
+│    • Site-to-site with multiple subnets             │
+│    • VPN + VLAN interactions                        │
+│    • NAT traversal issues                           │
 │                                                     │
-│ 3. Advanced Traffic Shaping                        │
-│    • ALTQ limitations on high-speed interfaces     │
-│    • Queue management on virtual interfaces        │
+│ 3. Advanced Traffic Shaping                         │
+│    • ALTQ limitations on high-speed interfaces      │
+│    • Queue management on virtual interfaces         │
 │                                                     │
-│ 4. Package Ecosystem Stability                     │
-│    • Third-party packages breaking core functions  │
-│    • Update conflicts between packages             │
+│ 4. Package Ecosystem Stability                      │
+│    • Third-party packages breaking core functions   │
+│    • Update conflicts between packages              │
 │                                                     │
-│ 5. High Availability Edge Cases                    │
-│    • Split-brain scenarios                         │
-│    • CARP failover timing issues                   │
+│ 5. High Availability Edge Cases                     │
+│    • Split-brain scenarios                          │
+│    • CARP failover timing issues                    │
 └─────────────────────────────────────────────────────┘
 ```
 
