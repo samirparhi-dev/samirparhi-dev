@@ -6,14 +6,14 @@
 ┌─────────────────────────────────────────────────────────┐
 │                 PERFORMANCE TARGETS                     │
 ├─────────────────────────────────────────────────────────┤
-│ Firewall throughput:        19,100 Mbps (~19.1 Gbps)  │
-│ Firewall IMIX:              10,500 Mbps (~10.5 Gbps)  │
-│ IPS throughput:              5,850 Mbps (~5.85 Gbps)  │
-│ Threat Protection:           4,750 Mbps (~4.75 Gbps)  │
-│ Concurrent connections:      6,550,000 sessions        │
-│ New connections/sec:         105,000 CPS               │
-│ SSL/TLS Inspection:          1,700 Mbps (~1.7 Gbps)   │
-│ SSL/TLS Concurrent:          18,432 sessions           │
+│ Firewall throughput:        19,100 Mbps (~19.1 Gbps)    │
+│ Firewall IMIX:              10,500 Mbps (~10.5 Gbps)    │
+│ IPS throughput:              5,850 Mbps (~5.85 Gbps)    │
+│ Threat Protection:           4,750 Mbps (~4.75 Gbps)    │
+│ Concurrent connections:      6,550,000 sessions         │
+│ New connections/sec:         105,000 CPS                │
+│ SSL/TLS Inspection:          1,700 Mbps (~1.7 Gbps)     │
+│ SSL/TLS Concurrent:          18,432 sessions            │
 └─────────────────────────────────────────────────────────┘
 ```
 
