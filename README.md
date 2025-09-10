@@ -4,7 +4,7 @@
 
 Just a passionate infra dev who believes in building robust, secure systems from the ground up. Currently diving deep into **MCP & ACP servers** and exploring the fascinating world of AI infrastructure. When I'm not wrestling with Kubernetes configs, you'll find me crafting system-level code in Rust or designing data pipelines that actually make sense.
 
-## 🛠️ What I'm Into
+## 🛠️ Hobbies
 
 **Core Stack:**
 - 🦀 **Rust** - Systems programming, performance-critical apps
