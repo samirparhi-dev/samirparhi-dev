@@ -1,4 +1,31 @@
+<a href="https://github.com/samirparhi-dev">
+  <img align="center" width="80%" src="./metrics.plugin.activity.svg"/>
+</a>
+<p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Major+Mono+Display&size=35&pause=2000&color=-4B0082&center=true&repeat=false&random=false&width=330&height=75&lines=Hello+🌏" alt="Typing SVG" /></a>
+</p>
 
+<p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Passions+Conflict&size=55&pause=3000&color=2936F7&repeat=false&random=false&width=450&height=60&lines=Free+For+Social+Cause..." alt="Typing SVG" /></a>
+</p>
+
+<p align="center"> 
+   <a href="https://komarev.com/ghpvc/?username=samirparhi-dev"><img src="https://komarev.com/ghpvc/?username=samirparhi-dev">
+</p>
+<p align="center">
+   <a href="https://github.com/samirparhi-dev"><img src="https://img.shields.io/badge/-GitHub-800080?logo=github&logoColor=white"></a>
+   <a href="https://linkedin.com/in/samir-parhi"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?logo=linkedin&logoColor=white" ></a>
+   <a href="https://twitter.com/samirparhi"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fsamirparhi"></a>
+   <a href="mailto:samirparhi@gmail.com"><img src="https://img.shields.io/badge/-Mail-4169E1?logo=gmail&logoColor=white" ></a>
+ </p>
+
+ ### 🌿 Creator of:
+
+ <p align="center">
+   <a href="https://ls-lrt.com/"> <img src="https://img.shields.io/badge/%20My%20blog%20(Built%20with%20Rust%20and%20Zola)%20-8A2BE2?"></a>
+   <a href="https://sharang.s9lab.dev/>(https://github.com/samirparhi-dev/sharang)"> <img src="https://img.shields.io/badge/%20A%20Saas%20Productivity%20App%20(Built%20with%20Julia%20and%20Dash.jl)%20-8A2BE2?"></a>
+   <a href="https://capita7.com/"><img src="https://img.shields.io/badge/%20A%20Org%20App%20(Built%20with%20Rust%20and%20leptos)%20-8A2BE2?"></a>
+ </p>
 <!-- <div style="text-align: left;">
  <p align="left">
    <img align="left" width="15%" height="10%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/samirparhi-logo.png">
