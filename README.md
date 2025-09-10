@@ -1,9 +1,3 @@
- ### Creator of :
-<div style="text-align: left;">
- <p align="center">
-  <img align="left" width="100%" height="40%" src="https://raw.githubusercontent.com/samirparhi-dev/samirparhi-dev/main/Logos/my-show-case.svg">
- </p>
-</div>
 
 <!-- <div style="text-align: left;">
  <p align="left">
