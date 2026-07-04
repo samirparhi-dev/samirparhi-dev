@@ -8,26 +8,26 @@ This platform provides a seamless interface to control and monitor drones from d
 
 ## 🎯 Key Features
 
-- **Multi-Protocol Support**: MAVLink, DJI SDK, ArduPilot integration
-- **Unified API**: Single interface for all drone operations
-- **Real-time Telemetry**: Live data streaming via WebSockets
-- **Cloud Integration**: Store and process drone data in the cloud
-- **Mission Management**: Plan, upload, and execute autonomous missions
-- **Regulatory Compliance**: DGCA and NPNT compliance ready
-- **Scalable Architecture**: Handle multiple drones simultaneously
-- **AI-Ready**: Framework for AI/ML integration
+* **Multi-Protocol Support**: MAVLink, DJI SDK, ArduPilot integration
+* **Unified API**: Single interface for all drone operations
+* **Real-time Telemetry**: Live data streaming via WebSockets
+* **Cloud Integration**: Store and process drone data in the cloud
+* **Mission Management**: Plan, upload, and execute autonomous missions
+* **Regulatory Compliance**: DGCA and NPNT compliance ready
+* **Scalable Architecture**: Handle multiple drones simultaneously
+* **AI-Ready**: Framework for AI/ML integration
 
 ## 📋 Table of Contents
 
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [API Documentation](#api-documentation)
-- [Protocol Support](#protocol-support)
-- [Market Feasibility](#market-feasibility)
-- [AI Integration Roadmap](#ai-integration-roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+* [Architecture](unified-drone-app.md#architecture)
+* [Installation](unified-drone-app.md#installation)
+* [Quick Start](unified-drone-app.md#quick-start)
+* [API Documentation](unified-drone-app.md#api-documentation)
+* [Protocol Support](unified-drone-app.md#protocol-support)
+* [Market Feasibility](unified-drone-app.md#market-feasibility)
+* [AI Integration Roadmap](unified-drone-app.md#ai-integration-roadmap)
+* [Contributing](unified-drone-app.md#contributing)
+* [License](unified-drone-app.md#license)
 
 ## 🏗️ Architecture
 
@@ -55,9 +55,9 @@ This platform provides a seamless interface to control and monitor drones from d
 
 ### Prerequisites
 
-- Rust 1.70+
-- Tokio runtime
-- Network access to drones
+* Rust 1.70+
+* Tokio runtime
+* Network access to drones
 
 ### Dependencies
 
@@ -110,8 +110,9 @@ cargo run --bin drone_mcp_server
 ```
 
 The server will start on:
-- HTTP JSON-RPC API: `http://127.0.0.1:8080`
-- WebSocket Telemetry: `ws://127.0.0.1:8081`
+
+* HTTP JSON-RPC API: `http://127.0.0.1:8080`
+* WebSocket Telemetry: `ws://127.0.0.1:8081`
 
 ### 2. Register a Drone
 
@@ -175,60 +176,62 @@ curl -X POST http://localhost:8080 \
 
 ### Drone Management
 
-| Method | Description | Parameters |
-|--------|-------------|------------|
-| `drone.register` | Register a new drone | `DroneRegistrationRequest` |
-| `drone.unregister` | Remove a drone | `drone_id: String` |
-| `drone.list` | List all registered drones | None |
-| `drone.status` | Get drone status | `drone_id: String` |
+| Method             | Description                | Parameters                 |
+| ------------------ | -------------------------- | -------------------------- |
+| `drone.register`   | Register a new drone       | `DroneRegistrationRequest` |
+| `drone.unregister` | Remove a drone             | `drone_id: String`         |
+| `drone.list`       | List all registered drones | None                       |
+| `drone.status`     | Get drone status           | `drone_id: String`         |
 
 ### Command Operations
 
-| Method | Description | Parameters |
-|--------|-------------|------------|
-| `drone.command` | Send generic command | `CommandRequest` |
-| `drone.arm` | Arm the drone | `drone_id: String` |
-| `drone.disarm` | Disarm the drone | `drone_id: String` |
-| `drone.takeoff` | Takeoff to altitude | `drone_id: String, altitude: f32` |
-| `drone.land` | Land the drone | `drone_id: String` |
-| `drone.return_home` | Return to home position | `drone_id: String` |
-| `drone.goto` | Go to GPS coordinates | `drone_id: String, lat: f64, lon: f64, alt: f32` |
+| Method              | Description             | Parameters                                       |
+| ------------------- | ----------------------- | ------------------------------------------------ |
+| `drone.command`     | Send generic command    | `CommandRequest`                                 |
+| `drone.arm`         | Arm the drone           | `drone_id: String`                               |
+| `drone.disarm`      | Disarm the drone        | `drone_id: String`                               |
+| `drone.takeoff`     | Takeoff to altitude     | `drone_id: String, altitude: f32`                |
+| `drone.land`        | Land the drone          | `drone_id: String`                               |
+| `drone.return_home` | Return to home position | `drone_id: String`                               |
+| `drone.goto`        | Go to GPS coordinates   | `drone_id: String, lat: f64, lon: f64, alt: f32` |
 
 ### Telemetry Operations
 
-| Method | Description | Parameters |
-|--------|-------------|------------|
-| `telemetry.current` | Get current telemetry | `drone_id: String` |
-| `telemetry.history` | Get historical telemetry | `TelemetryFilter` |
+| Method                | Description                 | Parameters               |
+| --------------------- | --------------------------- | ------------------------ |
+| `telemetry.current`   | Get current telemetry       | `drone_id: String`       |
+| `telemetry.history`   | Get historical telemetry    | `TelemetryFilter`        |
 | `telemetry.subscribe` | Subscribe to real-time data | `drone_ids: Vec<String>` |
 
 ### Mission Operations
 
-| Method | Description | Parameters |
-|--------|-------------|------------|
-| `mission.upload` | Upload mission plan | `MissionPlan` |
-| `mission.start` | Start a mission | `drone_id: String, mission_id: String` |
-| `mission.pause` | Pause current mission | `drone_id: String` |
-| `mission.resume` | Resume paused mission | `drone_id: String` |
+| Method           | Description           | Parameters                             |
+| ---------------- | --------------------- | -------------------------------------- |
+| `mission.upload` | Upload mission plan   | `MissionPlan`                          |
+| `mission.start`  | Start a mission       | `drone_id: String, mission_id: String` |
+| `mission.pause`  | Pause current mission | `drone_id: String`                     |
+| `mission.resume` | Resume paused mission | `drone_id: String`                     |
 
 ### System Operations
 
-| Method | Description | Parameters |
-|--------|-------------|------------|
-| `system.health` | Get system health status | None |
-| `system.metrics` | Get performance metrics | None |
+| Method           | Description              | Parameters |
+| ---------------- | ------------------------ | ---------- |
+| `system.health`  | Get system health status | None       |
+| `system.metrics` | Get performance metrics  | None       |
 
 ## 🔌 Protocol Support
 
 ### MAVLink Protocol
 
 **Supported Features:**
-- Basic commands (ARM, DISARM, TAKEOFF, LAND)
-- Telemetry streaming
-- Mission waypoints
-- Parameter management
+
+* Basic commands (ARM, DISARM, TAKEOFF, LAND)
+* Telemetry streaming
+* Mission waypoints
+* Parameter management
 
 **Connection Examples:**
+
 ```rust
 // TCP connection
 "tcpin:127.0.0.1:5760"
@@ -243,32 +246,35 @@ curl -X POST http://localhost:8080 \
 ### DJI SDK Protocol
 
 **Supported Features:**
-- Flight control
-- Camera control
-- Gimbal control
-- Intelligent flight modes
+
+* Flight control
+* Camera control
+* Gimbal control
+* Intelligent flight modes
 
 **Requirements:**
-- DJI Developer Account
-- DJI SDK License
-- Compatible DJI Aircraft
+
+* DJI Developer Account
+* DJI SDK License
+* Compatible DJI Aircraft
 
 ### ArduPilot Protocol
 
 **Supported Features:**
-- All MAVLink features
-- ArduPilot-specific modes
-- Custom parameter sets
-- Advanced mission commands
+
+* All MAVLink features
+* ArduPilot-specific modes
+* Custom parameter sets
+* Advanced mission commands
 
 ## 📊 Market Feasibility in India
 
 ### Market Drivers
 
-- **Market Size**: India's drone market projected to reach $1.8B by 2026
-- **Government Support**: PLI scheme and liberalized drone regulations
-- **Growing Adoption**: 60%+ usage in agriculture, expanding to logistics and surveillance
-- **Regulatory Framework**: DGCA guidelines creating standardization need
+* **Market Size**: India's drone market projected to reach $1.8B by 2026
+* **Government Support**: PLI scheme and liberalized drone regulations
+* **Growing Adoption**: 60%+ usage in agriculture, expanding to logistics and surveillance
+* **Regulatory Framework**: DGCA guidelines creating standardization need
 
 ### Key Opportunities
 
@@ -279,39 +285,42 @@ curl -X POST http://localhost:8080 \
 
 ### Target Market Segments
 
-| Segment | Market Size (₹ Cr) | Key Applications | Growth Rate |
-|---------|-------------------|------------------|-------------|
-| Agriculture | 350-400 | Crop monitoring, spraying | 25% CAGR |
-| Infrastructure | 200-250 | Inspection, surveying | 30% CAGR |
-| Security | 150-200 | Surveillance, patrol | 20% CAGR |
-| Logistics | 100-150 | Delivery, inventory | 35% CAGR |
+| Segment        | Market Size (₹ Cr) | Key Applications          | Growth Rate |
+| -------------- | ------------------ | ------------------------- | ----------- |
+| Agriculture    | 350-400            | Crop monitoring, spraying | 25% CAGR    |
+| Infrastructure | 200-250            | Inspection, surveying     | 30% CAGR    |
+| Security       | 150-200            | Surveillance, patrol      | 20% CAGR    |
+| Logistics      | 100-150            | Delivery, inventory       | 35% CAGR    |
 
 ### Competitive Advantages
 
-- **Multi-vendor Support**: Unlike proprietary solutions
-- **Cost-effective**: Open-source reduces licensing costs
-- **Regulatory Compliance**: Built-in NPNT and DGCA compliance
-- **Scalable Architecture**: Handles rural connectivity issues
+* **Multi-vendor Support**: Unlike proprietary solutions
+* **Cost-effective**: Open-source reduces licensing costs
+* **Regulatory Compliance**: Built-in NPNT and DGCA compliance
+* **Scalable Architecture**: Handles rural connectivity issues
 
 ## 🤖 AI Integration Roadmap
 
 ### Phase 1: Basic Analytics (Months 1-6)
-- **Computer Vision**: Basic image processing for crop health
-- **Pattern Recognition**: Automated defect detection
-- **Data Analytics**: Flight pattern optimization
-- **Predictive Maintenance**: Battery and component life prediction
+
+* **Computer Vision**: Basic image processing for crop health
+* **Pattern Recognition**: Automated defect detection
+* **Data Analytics**: Flight pattern optimization
+* **Predictive Maintenance**: Battery and component life prediction
 
 ### Phase 2: Advanced Intelligence (Months 6-12)
-- **Autonomous Navigation**: AI-powered path planning
-- **Swarm Coordination**: Multi-drone mission coordination
-- **Real-time Decision Making**: Weather-based flight adjustments
-- **Advanced Analytics**: Predictive crop yield analysis
+
+* **Autonomous Navigation**: AI-powered path planning
+* **Swarm Coordination**: Multi-drone mission coordination
+* **Real-time Decision Making**: Weather-based flight adjustments
+* **Advanced Analytics**: Predictive crop yield analysis
 
 ### Phase 3: Deep Learning (Months 12-18)
-- **Neural Network Integration**: Custom models for specific use cases
-- **Edge Computing**: On-drone AI processing
-- **Reinforcement Learning**: Self-optimizing flight patterns
-- **Advanced Computer Vision**: Object tracking and identification
+
+* **Neural Network Integration**: Custom models for specific use cases
+* **Edge Computing**: On-drone AI processing
+* **Reinforcement Learning**: Self-optimizing flight patterns
+* **Advanced Computer Vision**: Object tracking and identification
 
 ### AI Implementation Examples
 
@@ -341,35 +350,35 @@ pub struct AutonomousController {
 ## 🏛️ Regulatory Compliance
 
 ### DGCA Compliance Features
-- **DigitalSky Integration**: Automated flight permission requests
-- **NPNT Implementation**: No Permission No Takeoff compliance
-- **Flight Logging**: Automated log generation and storage
-- **Incident Reporting**: Standardized incident documentation
+
+* **DigitalSky Integration**: Automated flight permission requests
+* **NPNT Implementation**: No Permission No Takeoff compliance
+* **Flight Logging**: Automated log generation and storage
+* **Incident Reporting**: Standardized incident documentation
 
 ### Data Privacy & Security
-- **End-to-end Encryption**: All communication encrypted
-- **Access Control**: Role-based permissions
-- **Audit Trail**: Complete operation logging
-- **Data Sovereignty**: India-based cloud storage options
+
+* **End-to-end Encryption**: All communication encrypted
+* **Access Control**: Role-based permissions
+* **Audit Trail**: Complete operation logging
+* **Data Sovereignty**: India-based cloud storage options
 
 ## 💰 Business Model
 
 ### Revenue Streams
 
 1. **SaaS Subscriptions**
-   - Basic: ₹5,000/month (up to 5 drones)
-   - Professional: ₹15,000/month (up to 20 drones)
-   - Enterprise: ₹50,000/month (unlimited drones)
-
+   * Basic: ₹5,000/month (up to 5 drones)
+   * Professional: ₹15,000/month (up to 20 drones)
+   * Enterprise: ₹50,000/month (unlimited drones)
 2. **Usage-based Pricing**
-   - Pay-per-flight: ₹100-500 per flight hour
-   - Data processing: ₹10-50 per GB processed
-   - API calls: ₹1-5 per 1000 calls
-
+   * Pay-per-flight: ₹100-500 per flight hour
+   * Data processing: ₹10-50 per GB processed
+   * API calls: ₹1-5 per 1000 calls
 3. **Professional Services**
-   - Custom integration: ₹2-10 lakhs per project
-   - Training and support: ₹50,000-2 lakhs
-   - Regulatory consulting: ₹1-5 lakhs
+   * Custom integration: ₹2-10 lakhs per project
+   * Training and support: ₹50,000-2 lakhs
+   * Regulatory consulting: ₹1-5 lakhs
 
 ## 🚦 Getting Started - Development
 
@@ -422,6 +431,7 @@ cargo test mavlink
 ### Environment Setup
 
 Create `.env` file:
+
 ```env
 # Server Configuration
 HTTP_PORT=8080
@@ -527,56 +537,58 @@ DJI_APP_SECRET=your_dji_secret
 
 ### Benchmarks
 
-- **Concurrent Drones**: 100+ simultaneous connections
-- **Telemetry Rate**: 10Hz per drone (configurable)
-- **Command Latency**: <50ms average response time
-- **Data Throughput**: 1GB+ telemetry data per hour
-- **Uptime**: 99.9% availability target
+* **Concurrent Drones**: 100+ simultaneous connections
+* **Telemetry Rate**: 10Hz per drone (configurable)
+* **Command Latency**: <50ms average response time
+* **Data Throughput**: 1GB+ telemetry data per hour
+* **Uptime**: 99.9% availability target
 
 ### Optimization Tips
 
-1. **Network Optimization**
-   ```rust
-   // Configure telemetry rates based on use case
-   let config = TelemetryConfig {
-       rate_hz: 5, // Lower for battery savings
-       fields: vec!["position", "battery"], // Only required fields
-   };
-   ```
+1.  **Network Optimization**
 
-2. **Memory Management**
-   ```rust
-   // Limit telemetry history to prevent memory issues
-   const MAX_TELEMETRY_RECORDS: usize = 10_000;
-   ```
+    ```rust
+    // Configure telemetry rates based on use case
+    let config = TelemetryConfig {
+        rate_hz: 5, // Lower for battery savings
+        fields: vec!["position", "battery"], // Only required fields
+    };
+    ```
+2.  **Memory Management**
 
-3. **Connection Pooling**
-   ```rust
-   // Reuse connections for better performance
-   let connection_pool = ConnectionPool::new(max_connections: 50);
-   ```
+    ```rust
+    // Limit telemetry history to prevent memory issues
+    const MAX_TELEMETRY_RECORDS: usize = 10_000;
+    ```
+3.  **Connection Pooling**
+
+    ```rust
+    // Reuse connections for better performance
+    let connection_pool = ConnectionPool::new(max_connections: 50);
+    ```
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-1. **Connection Timeout**
-   ```
-   Error: DroneAdapterError::TimeoutError
-   Solution: Check network connectivity and drone power status
-   ```
+1.  **Connection Timeout**
 
-2. **Protocol Mismatch**
-   ```
-   Error: DroneAdapterError::ProtocolError("Invalid message format")
-   Solution: Verify protocol type matches drone firmware
-   ```
+    ```
+    Error: DroneAdapterError::TimeoutError
+    Solution: Check network connectivity and drone power status
+    ```
+2.  **Protocol Mismatch**
 
-3. **Permission Denied**
-   ```
-   Error: DroneAdapterError::ConnectionError("Permission denied")
-   Solution: Check user permissions for serial ports (Linux: sudo usermod -a -G dialout $USER)
-   ```
+    ```
+    Error: DroneAdapterError::ProtocolError("Invalid message format")
+    Solution: Verify protocol type matches drone firmware
+    ```
+3.  **Permission Denied**
+
+    ```
+    Error: DroneAdapterError::ConnectionError("Permission denied")
+    Solution: Check user permissions for serial ports (Linux: sudo usermod -a -G dialout $USER)
+    ```
 
 ### Debug Mode
 
@@ -605,10 +617,10 @@ RUST_LOG=tokio_tungstenite=debug cargo run
 
 ### Code Standards
 
-- Follow Rust best practices and idioms
-- Add comprehensive tests for new features
-- Update documentation for API changes
-- Use `cargo fmt` and `cargo clippy` before committing
+* Follow Rust best practices and idioms
+* Add comprehensive tests for new features
+* Update documentation for API changes
+* Use `cargo fmt` and `cargo clippy` before committing
 
 ### Adding New Protocols
 
@@ -618,6 +630,7 @@ RUST_LOG=tokio_tungstenite=debug cargo run
 4. Update documentation
 
 Example:
+
 ```rust
 pub struct CustomProtocol {
     // Protocol-specific fields
@@ -635,24 +648,24 @@ impl DroneProtocol for CustomProtocol {
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/samirparhi-dev/samirparhi-dev/blob/main/unmaned%20vechile/LICENSE/README.md) file for details.
 
 ## 🙏 Acknowledgments
 
-- MAVLink project for the open protocol specification
-- DJI for their comprehensive SDK
-- ArduPilot community for extensive documentation
-- Indian drone industry pioneers for market insights
+* MAVLink project for the open protocol specification
+* DJI for their comprehensive SDK
+* ArduPilot community for extensive documentation
+* Indian drone industry pioneers for market insights
 
 ## 📞 Support
 
-- **Documentation**: [docs.drone-platform.com](https://docs.drone-platform.com)
-- **Community Forum**: [forum.drone-platform.com](https://forum.drone-platform.com)
-- **Issue Tracker**: [GitHub Issues](https://github.com/your-org/drone-management-platform/issues)
-- **Commercial Support**: contact@drone-platform.com
+* **Documentation**: [docs.drone-platform.com](https://docs.drone-platform.com)
+* **Community Forum**: [forum.drone-platform.com](https://forum.drone-platform.com)
+* **Issue Tracker**: [GitHub Issues](https://github.com/your-org/drone-management-platform/issues)
+* **Commercial Support**: contact@drone-platform.com
 
----
+***
 
 **Built with ❤️ for the Indian Drone Industry**
 
-*Empowering the future of autonomous flight through unified drone management and AI integration.*
+_Empowering the future of autonomous flight through unified drone management and AI integration._
